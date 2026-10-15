@@ -1,0 +1,3160 @@
+{
+  "core_id": "stella",
+  "display_name": "Stella",
+  "config_file": "stella.jsonc",
+  "slugs": [
+    "atari-2600"
+  ],
+  "bool_true_value": "enabled",
+  "bool_false_value": "disabled",
+  "tabs": [
+    {
+      "name": "settings_stella_tab_system",
+      "sections": [
+        {
+          "title": "settings_stella_section_system",
+          "options": [
+            {
+              "key": "stella_console",
+              "label": "settings_stella_console",
+              "type": "enum",
+              "default": "auto",
+              "choices": [
+                {
+                  "label": "Auto",
+                  "value": "auto"
+                },
+                {
+                  "label": "NTSC",
+                  "value": "ntsc"
+                },
+                {
+                  "label": "PAL",
+                  "value": "pal"
+                },
+                {
+                  "label": "SECAM",
+                  "value": "secam"
+                },
+                {
+                  "label": "NTSC-50",
+                  "value": "ntsc50"
+                },
+                {
+                  "label": "PAL-60",
+                  "value": "pal60"
+                },
+                {
+                  "label": "SECAM-60",
+                  "value": "secam60"
+                }
+              ]
+            },
+            {
+              "key": "stella_detect_pal60",
+              "label": "settings_stella_detect_pal60",
+              "type": "bool",
+              "default": "disabled"
+            },
+            {
+              "key": "stella_detect_ntsc50",
+              "label": "settings_stella_detect_ntsc50",
+              "type": "bool",
+              "default": "disabled"
+            },
+            {
+              "key": "stella_messages",
+              "label": "settings_stella_messages",
+              "type": "bool",
+              "default": "disabled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "settings_stella_tab_display",
+      "sections": [
+        {
+          "title": "settings_stella_section_screen",
+          "options": [
+            {
+              "key": "display_mode",
+              "label": "settings_stella_display_mode",
+              "type": "enum",
+              "default": "Display",
+              "choices": [
+                {
+                  "label": "Integer",
+                  "value": "Integer"
+                },
+                {
+                  "label": "Display",
+                  "value": "Display"
+                }
+              ]
+            },
+            {
+              "key": "display_size",
+              "label": "settings_stella_display_size",
+              "type": "enum",
+              "default": "Original",
+              "choices": [
+                {
+                  "label": "Stretch",
+                  "value": "Stretch"
+                },
+                {
+                  "label": "4:3",
+                  "value": "4:3"
+                },
+                {
+                  "label": "16:9",
+                  "value": "16:9"
+                },
+                {
+                  "label": "Original",
+                  "value": "Original"
+                },
+                {
+                  "label": "1x",
+                  "value": "1x"
+                },
+                {
+                  "label": "2x",
+                  "value": "2x"
+                },
+                {
+                  "label": "Auto",
+                  "value": "Auto"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "settings_stella_section_fast_forward",
+          "options": [
+            {
+              "key": "fast_forward_speed",
+              "label": "settings_stella_fast_forward_speed",
+              "type": "enum",
+              "default": "200",
+              "choices": [
+                {
+                  "label": "150%",
+                  "value": "150"
+                },
+                {
+                  "label": "200%",
+                  "value": "200"
+                },
+                {
+                  "label": "300%",
+                  "value": "300"
+                },
+                {
+                  "label": "400%",
+                  "value": "400"
+                },
+                {
+                  "label": "Unlimited",
+                  "value": "unlimited"
+                }
+              ]
+            },
+            {
+              "key": "fast_forward_mode",
+              "label": "settings_stella_fast_forward_mode",
+              "type": "enum",
+              "default": "hold",
+              "choices": [
+                {
+                  "label": "Hold",
+                  "value": "hold"
+                },
+                {
+                  "label": "Toggle",
+                  "value": "toggle"
+                }
+              ]
+            },
+            {
+              "key": "fast_forward_hotkey",
+              "label": "settings_stella_fast_forward_hotkey",
+              "type": "enum",
+              "default": "ZR",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "settings_stella_section_hud",
+          "options": [
+            {
+              "key": "fps_counter_position",
+              "label": "settings_stella_fps_counter",
+              "type": "enum",
+              "default": "hidden",
+              "choices": [
+                {
+                  "label": "Hidden",
+                  "value": "hidden"
+                },
+                {
+                  "label": "Top left",
+                  "value": "top_left"
+                },
+                {
+                  "label": "Top right",
+                  "value": "top_right"
+                },
+                {
+                  "label": "Bottom left",
+                  "value": "bottom_left"
+                },
+                {
+                  "label": "Bottom right",
+                  "value": "bottom_right"
+                }
+              ]
+            },
+            {
+              "key": "rendered_ir_position",
+              "label": "settings_stella_rendered_resolution",
+              "type": "enum",
+              "default": "hidden",
+              "choices": [
+                {
+                  "label": "Hidden",
+                  "value": "hidden"
+                },
+                {
+                  "label": "Top left",
+                  "value": "top_left"
+                },
+                {
+                  "label": "Top right",
+                  "value": "top_right"
+                },
+                {
+                  "label": "Bottom left",
+                  "value": "bottom_left"
+                },
+                {
+                  "label": "Bottom right",
+                  "value": "bottom_right"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "settings_stella_tab_video",
+      "sections": [
+        {
+          "title": "settings_stella_section_display",
+          "options": [
+            {
+              "key": "stella_filter",
+              "label": "settings_stella_filter",
+              "type": "enum",
+              "default": "disabled",
+              "choices": [
+                {
+                  "label": "Disabled",
+                  "value": "disabled"
+                },
+                {
+                  "label": "Composite",
+                  "value": "composite"
+                },
+                {
+                  "label": "S-Video",
+                  "value": "s-video"
+                },
+                {
+                  "label": "RGB",
+                  "value": "rgb"
+                },
+                {
+                  "label": "Badly adjusted",
+                  "value": "badly adjusted"
+                }
+              ]
+            },
+            {
+              "key": "stella_ntsc_aspect",
+              "label": "settings_stella_ntsc_aspect",
+              "type": "enum",
+              "default": "par",
+              "choices": [
+                {
+                  "label": "Pixel aspect (PAR)",
+                  "value": "par"
+                },
+                {
+                  "label": "75",
+                  "value": "75"
+                },
+                {
+                  "label": "76",
+                  "value": "76"
+                },
+                {
+                  "label": "77",
+                  "value": "77"
+                },
+                {
+                  "label": "78",
+                  "value": "78"
+                },
+                {
+                  "label": "79",
+                  "value": "79"
+                },
+                {
+                  "label": "80",
+                  "value": "80"
+                },
+                {
+                  "label": "81",
+                  "value": "81"
+                },
+                {
+                  "label": "82",
+                  "value": "82"
+                },
+                {
+                  "label": "83",
+                  "value": "83"
+                },
+                {
+                  "label": "84",
+                  "value": "84"
+                },
+                {
+                  "label": "85",
+                  "value": "85"
+                },
+                {
+                  "label": "86",
+                  "value": "86"
+                },
+                {
+                  "label": "87",
+                  "value": "87"
+                },
+                {
+                  "label": "88",
+                  "value": "88"
+                },
+                {
+                  "label": "89",
+                  "value": "89"
+                },
+                {
+                  "label": "90",
+                  "value": "90"
+                },
+                {
+                  "label": "91",
+                  "value": "91"
+                },
+                {
+                  "label": "92",
+                  "value": "92"
+                },
+                {
+                  "label": "93",
+                  "value": "93"
+                },
+                {
+                  "label": "94",
+                  "value": "94"
+                },
+                {
+                  "label": "95",
+                  "value": "95"
+                },
+                {
+                  "label": "96",
+                  "value": "96"
+                },
+                {
+                  "label": "97",
+                  "value": "97"
+                },
+                {
+                  "label": "98",
+                  "value": "98"
+                },
+                {
+                  "label": "99",
+                  "value": "99"
+                },
+                {
+                  "label": "100",
+                  "value": "100"
+                },
+                {
+                  "label": "101",
+                  "value": "101"
+                },
+                {
+                  "label": "102",
+                  "value": "102"
+                },
+                {
+                  "label": "103",
+                  "value": "103"
+                },
+                {
+                  "label": "104",
+                  "value": "104"
+                },
+                {
+                  "label": "105",
+                  "value": "105"
+                },
+                {
+                  "label": "106",
+                  "value": "106"
+                },
+                {
+                  "label": "107",
+                  "value": "107"
+                },
+                {
+                  "label": "108",
+                  "value": "108"
+                },
+                {
+                  "label": "109",
+                  "value": "109"
+                },
+                {
+                  "label": "110",
+                  "value": "110"
+                },
+                {
+                  "label": "111",
+                  "value": "111"
+                },
+                {
+                  "label": "112",
+                  "value": "112"
+                },
+                {
+                  "label": "113",
+                  "value": "113"
+                },
+                {
+                  "label": "114",
+                  "value": "114"
+                },
+                {
+                  "label": "115",
+                  "value": "115"
+                },
+                {
+                  "label": "116",
+                  "value": "116"
+                },
+                {
+                  "label": "117",
+                  "value": "117"
+                },
+                {
+                  "label": "118",
+                  "value": "118"
+                },
+                {
+                  "label": "119",
+                  "value": "119"
+                },
+                {
+                  "label": "120",
+                  "value": "120"
+                },
+                {
+                  "label": "121",
+                  "value": "121"
+                },
+                {
+                  "label": "122",
+                  "value": "122"
+                },
+                {
+                  "label": "123",
+                  "value": "123"
+                },
+                {
+                  "label": "124",
+                  "value": "124"
+                },
+                {
+                  "label": "125",
+                  "value": "125"
+                }
+              ]
+            },
+            {
+              "key": "stella_pal_aspect",
+              "label": "settings_stella_pal_aspect",
+              "type": "enum",
+              "default": "par",
+              "choices": [
+                {
+                  "label": "Pixel aspect (PAR)",
+                  "value": "par"
+                },
+                {
+                  "label": "75",
+                  "value": "75"
+                },
+                {
+                  "label": "76",
+                  "value": "76"
+                },
+                {
+                  "label": "77",
+                  "value": "77"
+                },
+                {
+                  "label": "78",
+                  "value": "78"
+                },
+                {
+                  "label": "79",
+                  "value": "79"
+                },
+                {
+                  "label": "80",
+                  "value": "80"
+                },
+                {
+                  "label": "81",
+                  "value": "81"
+                },
+                {
+                  "label": "82",
+                  "value": "82"
+                },
+                {
+                  "label": "83",
+                  "value": "83"
+                },
+                {
+                  "label": "84",
+                  "value": "84"
+                },
+                {
+                  "label": "85",
+                  "value": "85"
+                },
+                {
+                  "label": "86",
+                  "value": "86"
+                },
+                {
+                  "label": "87",
+                  "value": "87"
+                },
+                {
+                  "label": "88",
+                  "value": "88"
+                },
+                {
+                  "label": "89",
+                  "value": "89"
+                },
+                {
+                  "label": "90",
+                  "value": "90"
+                },
+                {
+                  "label": "91",
+                  "value": "91"
+                },
+                {
+                  "label": "92",
+                  "value": "92"
+                },
+                {
+                  "label": "93",
+                  "value": "93"
+                },
+                {
+                  "label": "94",
+                  "value": "94"
+                },
+                {
+                  "label": "95",
+                  "value": "95"
+                },
+                {
+                  "label": "96",
+                  "value": "96"
+                },
+                {
+                  "label": "97",
+                  "value": "97"
+                },
+                {
+                  "label": "98",
+                  "value": "98"
+                },
+                {
+                  "label": "99",
+                  "value": "99"
+                },
+                {
+                  "label": "100",
+                  "value": "100"
+                },
+                {
+                  "label": "101",
+                  "value": "101"
+                },
+                {
+                  "label": "102",
+                  "value": "102"
+                },
+                {
+                  "label": "103",
+                  "value": "103"
+                },
+                {
+                  "label": "104",
+                  "value": "104"
+                },
+                {
+                  "label": "105",
+                  "value": "105"
+                },
+                {
+                  "label": "106",
+                  "value": "106"
+                },
+                {
+                  "label": "107",
+                  "value": "107"
+                },
+                {
+                  "label": "108",
+                  "value": "108"
+                },
+                {
+                  "label": "109",
+                  "value": "109"
+                },
+                {
+                  "label": "110",
+                  "value": "110"
+                },
+                {
+                  "label": "111",
+                  "value": "111"
+                },
+                {
+                  "label": "112",
+                  "value": "112"
+                },
+                {
+                  "label": "113",
+                  "value": "113"
+                },
+                {
+                  "label": "114",
+                  "value": "114"
+                },
+                {
+                  "label": "115",
+                  "value": "115"
+                },
+                {
+                  "label": "116",
+                  "value": "116"
+                },
+                {
+                  "label": "117",
+                  "value": "117"
+                },
+                {
+                  "label": "118",
+                  "value": "118"
+                },
+                {
+                  "label": "119",
+                  "value": "119"
+                },
+                {
+                  "label": "120",
+                  "value": "120"
+                },
+                {
+                  "label": "121",
+                  "value": "121"
+                },
+                {
+                  "label": "122",
+                  "value": "122"
+                },
+                {
+                  "label": "123",
+                  "value": "123"
+                },
+                {
+                  "label": "124",
+                  "value": "124"
+                },
+                {
+                  "label": "125",
+                  "value": "125"
+                }
+              ]
+            },
+            {
+              "key": "stella_crop_hoverscan",
+              "label": "settings_stella_crop_hoverscan",
+              "type": "bool",
+              "default": "disabled"
+            },
+            {
+              "key": "stella_crop_voverscan",
+              "label": "settings_stella_crop_voverscan",
+              "type": "enum",
+              "default": "0",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                },
+                {
+                  "label": "11",
+                  "value": "11"
+                },
+                {
+                  "label": "12",
+                  "value": "12"
+                },
+                {
+                  "label": "13",
+                  "value": "13"
+                },
+                {
+                  "label": "14",
+                  "value": "14"
+                },
+                {
+                  "label": "15",
+                  "value": "15"
+                },
+                {
+                  "label": "16",
+                  "value": "16"
+                },
+                {
+                  "label": "17",
+                  "value": "17"
+                },
+                {
+                  "label": "18",
+                  "value": "18"
+                },
+                {
+                  "label": "19",
+                  "value": "19"
+                },
+                {
+                  "label": "20",
+                  "value": "20"
+                },
+                {
+                  "label": "21",
+                  "value": "21"
+                },
+                {
+                  "label": "22",
+                  "value": "22"
+                },
+                {
+                  "label": "23",
+                  "value": "23"
+                },
+                {
+                  "label": "24",
+                  "value": "24"
+                }
+              ]
+            },
+            {
+              "key": "stella_phosphor",
+              "label": "settings_stella_phosphor",
+              "type": "enum",
+              "default": "auto",
+              "choices": [
+                {
+                  "label": "Auto",
+                  "value": "auto"
+                },
+                {
+                  "label": "On",
+                  "value": "on"
+                },
+                {
+                  "label": "Off",
+                  "value": "off"
+                }
+              ]
+            },
+            {
+              "key": "stella_phosphor_blend",
+              "label": "settings_stella_phosphor_blend",
+              "type": "enum",
+              "default": "60",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                },
+                {
+                  "label": "15",
+                  "value": "15"
+                },
+                {
+                  "label": "20",
+                  "value": "20"
+                },
+                {
+                  "label": "25",
+                  "value": "25"
+                },
+                {
+                  "label": "30",
+                  "value": "30"
+                },
+                {
+                  "label": "35",
+                  "value": "35"
+                },
+                {
+                  "label": "40",
+                  "value": "40"
+                },
+                {
+                  "label": "45",
+                  "value": "45"
+                },
+                {
+                  "label": "50",
+                  "value": "50"
+                },
+                {
+                  "label": "55",
+                  "value": "55"
+                },
+                {
+                  "label": "60",
+                  "value": "60"
+                },
+                {
+                  "label": "65",
+                  "value": "65"
+                },
+                {
+                  "label": "70",
+                  "value": "70"
+                },
+                {
+                  "label": "75",
+                  "value": "75"
+                },
+                {
+                  "label": "80",
+                  "value": "80"
+                },
+                {
+                  "label": "85",
+                  "value": "85"
+                },
+                {
+                  "label": "90",
+                  "value": "90"
+                },
+                {
+                  "label": "95",
+                  "value": "95"
+                },
+                {
+                  "label": "100",
+                  "value": "100"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "settings_stella_section_palette",
+          "options": [
+            {
+              "key": "stella_palette",
+              "label": "settings_stella_palette",
+              "type": "enum",
+              "default": "standard",
+              "choices": [
+                {
+                  "label": "Standard",
+                  "value": "standard"
+                },
+                {
+                  "label": "z26",
+                  "value": "z26"
+                },
+                {
+                  "label": "User",
+                  "value": "user"
+                },
+                {
+                  "label": "Custom",
+                  "value": "custom"
+                }
+              ]
+            },
+            {
+              "key": "stella_pal_contrast",
+              "label": "settings_stella_pal_contrast",
+              "type": "enum",
+              "default": "0",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "-10",
+                  "value": "-10"
+                },
+                {
+                  "label": "-9",
+                  "value": "-9"
+                },
+                {
+                  "label": "-8",
+                  "value": "-8"
+                },
+                {
+                  "label": "-7",
+                  "value": "-7"
+                },
+                {
+                  "label": "-6",
+                  "value": "-6"
+                },
+                {
+                  "label": "-5",
+                  "value": "-5"
+                },
+                {
+                  "label": "-4",
+                  "value": "-4"
+                },
+                {
+                  "label": "-3",
+                  "value": "-3"
+                },
+                {
+                  "label": "-2",
+                  "value": "-2"
+                },
+                {
+                  "label": "-1",
+                  "value": "-1"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                }
+              ]
+            },
+            {
+              "key": "stella_pal_brightness",
+              "label": "settings_stella_pal_brightness",
+              "type": "enum",
+              "default": "0",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "-10",
+                  "value": "-10"
+                },
+                {
+                  "label": "-9",
+                  "value": "-9"
+                },
+                {
+                  "label": "-8",
+                  "value": "-8"
+                },
+                {
+                  "label": "-7",
+                  "value": "-7"
+                },
+                {
+                  "label": "-6",
+                  "value": "-6"
+                },
+                {
+                  "label": "-5",
+                  "value": "-5"
+                },
+                {
+                  "label": "-4",
+                  "value": "-4"
+                },
+                {
+                  "label": "-3",
+                  "value": "-3"
+                },
+                {
+                  "label": "-2",
+                  "value": "-2"
+                },
+                {
+                  "label": "-1",
+                  "value": "-1"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                }
+              ]
+            },
+            {
+              "key": "stella_pal_hue",
+              "label": "settings_stella_pal_hue",
+              "type": "enum",
+              "default": "0",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "-10",
+                  "value": "-10"
+                },
+                {
+                  "label": "-9",
+                  "value": "-9"
+                },
+                {
+                  "label": "-8",
+                  "value": "-8"
+                },
+                {
+                  "label": "-7",
+                  "value": "-7"
+                },
+                {
+                  "label": "-6",
+                  "value": "-6"
+                },
+                {
+                  "label": "-5",
+                  "value": "-5"
+                },
+                {
+                  "label": "-4",
+                  "value": "-4"
+                },
+                {
+                  "label": "-3",
+                  "value": "-3"
+                },
+                {
+                  "label": "-2",
+                  "value": "-2"
+                },
+                {
+                  "label": "-1",
+                  "value": "-1"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                }
+              ]
+            },
+            {
+              "key": "stella_pal_saturation",
+              "label": "settings_stella_pal_saturation",
+              "type": "enum",
+              "default": "0",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "-10",
+                  "value": "-10"
+                },
+                {
+                  "label": "-9",
+                  "value": "-9"
+                },
+                {
+                  "label": "-8",
+                  "value": "-8"
+                },
+                {
+                  "label": "-7",
+                  "value": "-7"
+                },
+                {
+                  "label": "-6",
+                  "value": "-6"
+                },
+                {
+                  "label": "-5",
+                  "value": "-5"
+                },
+                {
+                  "label": "-4",
+                  "value": "-4"
+                },
+                {
+                  "label": "-3",
+                  "value": "-3"
+                },
+                {
+                  "label": "-2",
+                  "value": "-2"
+                },
+                {
+                  "label": "-1",
+                  "value": "-1"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                }
+              ]
+            },
+            {
+              "key": "stella_pal_gamma",
+              "label": "settings_stella_pal_gamma",
+              "type": "enum",
+              "default": "0",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "-10",
+                  "value": "-10"
+                },
+                {
+                  "label": "-9",
+                  "value": "-9"
+                },
+                {
+                  "label": "-8",
+                  "value": "-8"
+                },
+                {
+                  "label": "-7",
+                  "value": "-7"
+                },
+                {
+                  "label": "-6",
+                  "value": "-6"
+                },
+                {
+                  "label": "-5",
+                  "value": "-5"
+                },
+                {
+                  "label": "-4",
+                  "value": "-4"
+                },
+                {
+                  "label": "-3",
+                  "value": "-3"
+                },
+                {
+                  "label": "-2",
+                  "value": "-2"
+                },
+                {
+                  "label": "-1",
+                  "value": "-1"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "settings_stella_tab_audio",
+      "sections": [
+        {
+          "title": "settings_stella_section_sound",
+          "options": [
+            {
+              "key": "stella_stereo",
+              "label": "settings_stella_stereo",
+              "type": "enum",
+              "default": "auto",
+              "choices": [
+                {
+                  "label": "Auto",
+                  "value": "auto"
+                },
+                {
+                  "label": "On",
+                  "value": "on"
+                },
+                {
+                  "label": "Off",
+                  "value": "off"
+                }
+              ]
+            },
+            {
+              "key": "stella_dpc_pitch",
+              "label": "settings_stella_dpc_pitch",
+              "type": "enum",
+              "default": "20000",
+              "choices": [
+                {
+                  "label": "20000",
+                  "value": "20000"
+                },
+                {
+                  "label": "10000",
+                  "value": "10000"
+                },
+                {
+                  "label": "11000",
+                  "value": "11000"
+                },
+                {
+                  "label": "12000",
+                  "value": "12000"
+                },
+                {
+                  "label": "13000",
+                  "value": "13000"
+                },
+                {
+                  "label": "14000",
+                  "value": "14000"
+                },
+                {
+                  "label": "15000",
+                  "value": "15000"
+                },
+                {
+                  "label": "16000",
+                  "value": "16000"
+                },
+                {
+                  "label": "17000",
+                  "value": "17000"
+                },
+                {
+                  "label": "18000",
+                  "value": "18000"
+                },
+                {
+                  "label": "19000",
+                  "value": "19000"
+                },
+                {
+                  "label": "21000",
+                  "value": "21000"
+                },
+                {
+                  "label": "22000",
+                  "value": "22000"
+                },
+                {
+                  "label": "23000",
+                  "value": "23000"
+                },
+                {
+                  "label": "24000",
+                  "value": "24000"
+                },
+                {
+                  "label": "25000",
+                  "value": "25000"
+                },
+                {
+                  "label": "26000",
+                  "value": "26000"
+                },
+                {
+                  "label": "27000",
+                  "value": "27000"
+                },
+                {
+                  "label": "28000",
+                  "value": "28000"
+                },
+                {
+                  "label": "29000",
+                  "value": "29000"
+                },
+                {
+                  "label": "30000",
+                  "value": "30000"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "settings_stella_tab_input",
+      "sections": [
+        {
+          "title": "settings_stella_section_paddles",
+          "options": [
+            {
+              "key": "stella_paddle_joypad_sensitivity",
+              "label": "settings_stella_paddle_joypad_sensitivity",
+              "type": "enum",
+              "default": "3",
+              "choices": [
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                },
+                {
+                  "label": "11",
+                  "value": "11"
+                },
+                {
+                  "label": "12",
+                  "value": "12"
+                },
+                {
+                  "label": "13",
+                  "value": "13"
+                },
+                {
+                  "label": "14",
+                  "value": "14"
+                },
+                {
+                  "label": "15",
+                  "value": "15"
+                },
+                {
+                  "label": "16",
+                  "value": "16"
+                },
+                {
+                  "label": "17",
+                  "value": "17"
+                },
+                {
+                  "label": "18",
+                  "value": "18"
+                },
+                {
+                  "label": "19",
+                  "value": "19"
+                },
+                {
+                  "label": "20",
+                  "value": "20"
+                }
+              ]
+            },
+            {
+              "key": "stella_paddle_analog_sensitivity",
+              "label": "settings_stella_paddle_analog_sensitivity",
+              "type": "enum",
+              "default": "20",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                },
+                {
+                  "label": "11",
+                  "value": "11"
+                },
+                {
+                  "label": "12",
+                  "value": "12"
+                },
+                {
+                  "label": "13",
+                  "value": "13"
+                },
+                {
+                  "label": "14",
+                  "value": "14"
+                },
+                {
+                  "label": "15",
+                  "value": "15"
+                },
+                {
+                  "label": "16",
+                  "value": "16"
+                },
+                {
+                  "label": "17",
+                  "value": "17"
+                },
+                {
+                  "label": "18",
+                  "value": "18"
+                },
+                {
+                  "label": "19",
+                  "value": "19"
+                },
+                {
+                  "label": "20",
+                  "value": "20"
+                },
+                {
+                  "label": "21",
+                  "value": "21"
+                },
+                {
+                  "label": "22",
+                  "value": "22"
+                },
+                {
+                  "label": "23",
+                  "value": "23"
+                },
+                {
+                  "label": "24",
+                  "value": "24"
+                },
+                {
+                  "label": "25",
+                  "value": "25"
+                },
+                {
+                  "label": "26",
+                  "value": "26"
+                },
+                {
+                  "label": "27",
+                  "value": "27"
+                },
+                {
+                  "label": "28",
+                  "value": "28"
+                },
+                {
+                  "label": "29",
+                  "value": "29"
+                },
+                {
+                  "label": "30",
+                  "value": "30"
+                }
+              ]
+            },
+            {
+              "key": "stella_paddle_analog_deadzone",
+              "label": "settings_stella_paddle_analog_deadzone",
+              "type": "enum",
+              "default": "15",
+              "choices": [
+                {
+                  "label": "0",
+                  "value": "0"
+                },
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                },
+                {
+                  "label": "5",
+                  "value": "5"
+                },
+                {
+                  "label": "6",
+                  "value": "6"
+                },
+                {
+                  "label": "7",
+                  "value": "7"
+                },
+                {
+                  "label": "8",
+                  "value": "8"
+                },
+                {
+                  "label": "9",
+                  "value": "9"
+                },
+                {
+                  "label": "10",
+                  "value": "10"
+                },
+                {
+                  "label": "11",
+                  "value": "11"
+                },
+                {
+                  "label": "12",
+                  "value": "12"
+                },
+                {
+                  "label": "13",
+                  "value": "13"
+                },
+                {
+                  "label": "14",
+                  "value": "14"
+                },
+                {
+                  "label": "15",
+                  "value": "15"
+                },
+                {
+                  "label": "16",
+                  "value": "16"
+                },
+                {
+                  "label": "17",
+                  "value": "17"
+                },
+                {
+                  "label": "18",
+                  "value": "18"
+                },
+                {
+                  "label": "19",
+                  "value": "19"
+                },
+                {
+                  "label": "20",
+                  "value": "20"
+                },
+                {
+                  "label": "21",
+                  "value": "21"
+                },
+                {
+                  "label": "22",
+                  "value": "22"
+                },
+                {
+                  "label": "23",
+                  "value": "23"
+                },
+                {
+                  "label": "24",
+                  "value": "24"
+                },
+                {
+                  "label": "25",
+                  "value": "25"
+                },
+                {
+                  "label": "26",
+                  "value": "26"
+                },
+                {
+                  "label": "27",
+                  "value": "27"
+                },
+                {
+                  "label": "28",
+                  "value": "28"
+                },
+                {
+                  "label": "29",
+                  "value": "29"
+                },
+                {
+                  "label": "30",
+                  "value": "30"
+                }
+              ]
+            },
+            {
+              "key": "stella_paddle_analog_absolute",
+              "label": "settings_stella_paddle_analog_absolute",
+              "type": "bool",
+              "default": "disabled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "settings_stella_tab_controls",
+      "sections": [
+        {
+          "title": "settings_stella_section_button_mapping",
+          "options": [
+            {
+              "key": "map_up",
+              "label": "settings_stella_map_up",
+              "type": "enum",
+              "default": "Up",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_down",
+              "label": "settings_stella_map_down",
+              "type": "enum",
+              "default": "Down",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_left",
+              "label": "settings_stella_map_left",
+              "type": "enum",
+              "default": "Left",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_right",
+              "label": "settings_stella_map_right",
+              "type": "enum",
+              "default": "Right",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_fire",
+              "label": "settings_stella_map_fire",
+              "type": "enum",
+              "default": "A",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_trigger",
+              "label": "settings_stella_map_trigger",
+              "type": "enum",
+              "default": "B",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_booster",
+              "label": "settings_stella_map_booster",
+              "type": "enum",
+              "default": "Y",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "analog_dpad",
+              "label": "settings_stella_analog_dpad",
+              "type": "bool",
+              "default": "enabled"
+            }
+          ]
+        },
+        {
+          "title": "settings_stella_section_console_switches",
+          "options": [
+            {
+              "key": "map_select",
+              "label": "settings_stella_map_select",
+              "type": "enum",
+              "default": "Minus",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_reset",
+              "label": "settings_stella_map_reset",
+              "type": "enum",
+              "default": "Plus",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_left_diff_a",
+              "label": "settings_stella_map_left_diff_a",
+              "type": "enum",
+              "default": "L",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_left_diff_b",
+              "label": "settings_stella_map_left_diff_b",
+              "type": "enum",
+              "default": "ZL",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_right_diff_a",
+              "label": "settings_stella_map_right_diff_a",
+              "type": "enum",
+              "default": "R",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_right_diff_b",
+              "label": "settings_stella_map_right_diff_b",
+              "type": "enum",
+              "default": "X",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_color",
+              "label": "settings_stella_map_color",
+              "type": "enum",
+              "default": "StickL",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            },
+            {
+              "key": "map_bw",
+              "label": "settings_stella_map_bw",
+              "type": "enum",
+              "default": "StickR",
+              "choices": [
+                {
+                  "label": "A",
+                  "value": "A"
+                },
+                {
+                  "label": "B",
+                  "value": "B"
+                },
+                {
+                  "label": "X",
+                  "value": "X"
+                },
+                {
+                  "label": "Y",
+                  "value": "Y"
+                },
+                {
+                  "label": "L",
+                  "value": "L"
+                },
+                {
+                  "label": "R",
+                  "value": "R"
+                },
+                {
+                  "label": "ZL",
+                  "value": "ZL"
+                },
+                {
+                  "label": "ZR",
+                  "value": "ZR"
+                },
+                {
+                  "label": "Plus",
+                  "value": "Plus"
+                },
+                {
+                  "label": "Minus",
+                  "value": "Minus"
+                },
+                {
+                  "label": "Left stick",
+                  "value": "StickL"
+                },
+                {
+                  "label": "Right stick",
+                  "value": "StickR"
+                },
+                {
+                  "label": "Up",
+                  "value": "Up"
+                },
+                {
+                  "label": "Down",
+                  "value": "Down"
+                },
+                {
+                  "label": "Left",
+                  "value": "Left"
+                },
+                {
+                  "label": "Right",
+                  "value": "Right"
+                },
+                {
+                  "label": "Disabled",
+                  "value": "None"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

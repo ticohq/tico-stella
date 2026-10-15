@@ -1,0 +1,33 @@
+{
+  "id": "stella",
+  "name": "Stella",
+  "nro": "tico-stella.nro",
+  "launch": "\"{nro}\" \"{slug}\" \"{rom}\" \"{title}\"",
+  "settings": "config/modules/stella/settings.json",
+  "config_file": "stella.jsonc",
+  "system_dir": "stella",
+  "is_libretro": true,
+  "achievements": true,
+  "systems": [
+    {
+      "slug": "atari-2600",
+      "title": "Atari 2600",
+      "short_title": "2600",
+      "extensions": [
+        ".a26",
+        ".bin",
+        ".zip",
+        ".7z",
+        ".rar"
+      ],
+      "games_file": "atari-2600.dat",
+      "retroachievements_id": 25,
+      "colors": {
+        "start": "E6955F",
+        "end": "B85F3F",
+        "start_dark": "A8683F",
+        "end_dark": "7A3F2A"
+      }
+    }
+  ]
+}

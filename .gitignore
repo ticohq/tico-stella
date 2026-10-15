@@ -48,3 +48,27 @@ a.out
 *.sqlite3
 *.bak
 debian/files
+
+# tico
+*.a
+.vscode
+build_tico
+build_glslang_nx/
+build_desktop/
+/shaders
+/cache/
+tico/config/
+/imgui.ini
+
+# prebuilt libusbhsfs + read-only NTFS (usbntfs), see tico/deps/usbhsfs
+!tico/deps/usbhsfs/lib/*.a
+build.log
+*.dll
+*.dylib
+
+# TicoSecure build secret (shared with tico)
+/tico/TicoSecret.h
+
+# tico: the module and its translations are JSON, which the rule above ignores
+!tico/lang/*.json
+!tico/module/*.json

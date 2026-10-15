@@ -1,43 +1,35 @@
-Stella is a multi-platform Atari 2600 VCS emulator which allows you to
-play all of your favourite Atari 2600 games on your PC.  You'll find the
-Stella Users Manual in the docs subdirectory.  If you'd like to verify
-that you have the latest release of Stella, visit the Stella Website at:
+<picture>  
+<source media="(prefers-color-scheme: dark)" srcset="https://i.imgur.com/8qsV6MH.png">  
+<source media="(prefers-color-scheme: light)" srcset="https://i.imgur.com/4cpzGnB.png">  
+<img src="https://i.imgur.com/8qsV6MH.png" width="200">  
+</picture>  
 
-  [stella-emu.github.io](https://stella-emu.github.io)
+*Part of the tico ecosystem* — https://www.ticoverse.com
 
-Enjoy,
+**Stella** is a multi-platform Atari 2600 VCS emulator, here through its libretro port.
 
-The Stella Team
+This fork adapts Stella to work with the tico frontend and provides a standalone build for the Nintendo Switch, adding a small set of practical features while keeping the original experience familiar.
 
-# Reporting issues
+----------
 
-Please check the list of known issues first (see below) before reporting new ones.
-If you encounter any issues, please open a new issue on the project
-[issue tracker](https://github.com/stella-emu/stella/issues).
+## Summary
 
-Note: Please do **not** report issues regarding platforms other than PC and RetroN 77 
-(e.g. Libretro) here. The Stella Team is not responsible for these forks and cannot 
-help with them.
+This fork focuses on making Stella more usable in practice without changing its core purpose.
 
-# Known issues
+It adds:
 
-Please check out the [issue tracker](https://github.com/stella-emu/stella/issues) for
-a list of all currently known issues.
+-   Custom overlay matching tico design, including time, date, user avatar, and game title
+-   Explicit control over display (integer scaling and aspect ratios)
+-   Runtime-selectable rendering filters  
+-   Built-in save and load state support
+-   Integrated RetroAchievements with custom alerts
+-   The console's switches on the controller: Game Select, Game Reset, both difficulty switches and the TV type
+-   Paddles on the left stick
 
-# macOS Installation
+----------
 
-When downloading Stella on macOS, Gatekeeper may block the app from opening with a message like *"Stella cannot be opened because Apple cannot verify it is free from malware."*
+## A Note
 
-To work around this, use either of the following methods:
+A lot of work in this scene disappears over time — not because it lacked value, but because it was never shared.
 
-**Option 1 — Right-click to open (easiest):**
-1. Right-click (or Control-click) `Stella.app`
-2. Select **Open** from the context menu
-3. Click **Open** in the confirmation dialog
-
-You only need to do this once; Stella will open normally after that.
-
-**Option 2 — Terminal:**
-```bash
-xattr -dr com.apple.quarantine /path/to/Stella.app
-```
+If you are building something, consider releasing it. Even small contributions can help others move forward.
