@@ -28,6 +28,16 @@ It adds:
 
 ----------
 
+## Credits
+
+This fork is built on top of Stella and its libretro port.
+All core emulation work belongs to the Stella team and its contributors.
+
+- **Official Stella repository** — https://github.com/stella-emu/stella
+- **Stella website** — https://stella-emu.github.io
+
+----------
+
 ## A Note
 
 A lot of work in this scene disappears over time — not because it lacked value, but because it was never shared.
