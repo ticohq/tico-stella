@@ -176,5 +176,6 @@
     "settings_stella_value_top_right": "Arriba a la derecha",
     "settings_stella_value_unlimited": "Ilimitado",
     "settings_stella_value_up": "Arriba",
-    "settings_stella_value_user": "Usuario"
+    "settings_stella_value_user": "Usuario",
+    "emulator_quick_menu_tip": "Pulsa {plus} y {minus} a la vez para abrir el menú rápido"
 }

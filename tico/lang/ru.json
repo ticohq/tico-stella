@@ -175,5 +175,6 @@
     "settings_stella_value_top_right": "Сверху справа",
     "settings_stella_value_unlimited": "Без ограничений",
     "settings_stella_value_up": "Вверх",
-    "settings_stella_value_user": "Пользовательская"
+    "settings_stella_value_user": "Пользовательская",
+    "emulator_quick_menu_tip": "Нажмите {plus} и {minus} вместе, чтобы открыть быстрое меню"
 }

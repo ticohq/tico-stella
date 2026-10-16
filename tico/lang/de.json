@@ -175,5 +175,6 @@
     "settings_stella_value_top_right": "Oben rechts",
     "settings_stella_value_unlimited": "Unbegrenzt",
     "settings_stella_value_up": "Oben",
-    "settings_stella_value_user": "Benutzer"
+    "settings_stella_value_user": "Benutzer",
+    "emulator_quick_menu_tip": "Drücke {plus} und {minus} gleichzeitig, um das Schnellmenü zu öffnen"
 }
