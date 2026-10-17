@@ -94,7 +94,12 @@ COMMON_FLAGS="$COMMON_FLAGS -I$TICO_DIR/deps/glslang -I$TICO_DIR/deps/SPIRV-Refl
 COMMON_FLAGS="$COMMON_FLAGS -I$ROOT_DIR/src/os/libretro"
 COMMON_FLAGS="$COMMON_FLAGS -I$ROOT_DIR/rcheevos/include -DRC_CLIENT_SUPPORTS_HASH"
 
-CXXFLAGS="$COMMON_FLAGS -std=gnu++17 -fvisibility-inlines-hidden -fno-rtti -fno-exceptions"
+# With exceptions, as Stella's core is (HAVE_EXCEPTIONS in its libretro
+# Makefile). Both include nlohmann/json 3.12.0 and the linker keeps one copy of
+# each of its functions: built without exceptions, tico's copy aborts where
+# Stella's code expects a throw it catches (an empty combomap, a legacy key
+# mapping), so Stella would quit at start.
+CXXFLAGS="$COMMON_FLAGS -std=gnu++17 -fvisibility-inlines-hidden -fno-rtti"
 
 # Tico C++ sources
 TICO_SOURCES=(
